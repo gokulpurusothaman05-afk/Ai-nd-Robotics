@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <!-- Google Fonts: Inter Tight (Exact Template Font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <div class="header-wrapper">
+    <div class="container-default">
+      <div class="header-container-wrapper">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+
+        <!-- Exactly 5 Nav Items -->
+        <nav class="nav-menu-wrapper">
+          <ul class="list-nav-menu">
+            <li class="link-nav-item"><a href="index.html" class="active">Home</a></li>
+            <li class="link-nav-item"><a href="solutions.html">Solutions</a></li>
+            <li class="link-nav-item"><a href="products.html">Products</a></li>
+            <li class="link-nav-item"><a href="about.html">About</a></li>
+            <li class="link-nav-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-menu-right-side">
+          <a href="login.html" class="btn-secondary-outline">Portal Login</a>
+          <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
+            <div class="hamburger-menu-line"></div>
+            <div class="hamburger-menu-line"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+      <a href="login.html" class="btn-secondary-outline" style="width: 100%; text-align: center;">Client / Admin Login</a>
+    </div>
+  </div>
+
+  <!-- ==================== HERO SECTION V4 (Exact Home V2 Template) ==================== -->
+  <section class="section hero-v4">
+    <div class="container-default">
+      <div class="inner-container _434px">
+        <h1 class="display-10 mid">The world's revolution starts here</h1>
+        <p class="mg-top-2x-extra-small mg-bottom-small">
+          Stackly pioneers next-generation AI and autonomous robotic systems designed to master delicate physical dexterity, spatial reasoning, and real-world collaboration.
+        </p>
+        <div class="mg-bottom-148px">
+          <div class="buttons-row left">
+            <a href="products.html" class="primary-button">
+              <div>Reserve now</div>
+              <div class="primary-button-bg"><div class="primary-button-bg-text">Reserve now</div></div>
+            </a>
+            <a href="about.html" class="link white">
+              <div class="link-content-flex">
+                <div>Learn more</div>
+                <div class="item-icon-right">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Happy Customers Avatars & Counter -->
+        <div class="flex-horizontal-wrap justify-start gap-2x-extra-small">
+          <div class="flex-horizontal justify-start">
+            <div class="avatar-wrapper _48px">
+              <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dacd69_avatar-robotflow-webflow-template.png" alt="Avatar" class="avatar-image circle"/>
+            </div>
+            <div class="mg-left--10px">
+              <div class="avatar-wrapper _48px">
+                <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dacd80_avatar-v2-robotflow-webflow-template.png" alt="Avatar" class="avatar-image circle"/>
+              </div>
+            </div>
+            <div class="mg-left--10px">
+              <div class="avatar-wrapper _48px">
+                <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dacd7f_avatar-v1-robotflow-webflow-template.png" alt="Avatar" class="avatar-image circle"/>
+              </div>
+            </div>
+          </div>
+          <div class="display-3 mid">
+            <span class="count-up-number-animation" data-count="15000">15,000</span>+ happy customers
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exact Half-Right Hero Image & Overlays -->
+    <div class="home-v2-bottom-gradient"></div>
+    <div class="half-bg-right home-v2-hero">
+      <div class="background-image home-v2-hero"></div>
+      <div class="overlay home-v2-hero"></div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2: INFINITE MARQUEE V1 ==================== -->
+  <section class="top-md bottom-sm overflow-hidden">
+    <div class="infinite-marquee-wrapper v1">
+      <div class="infinite-marquee v1 marquee-scroll-item">
+        <div class="marquee-item"><div>Company</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Enterprise</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Startup</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Business</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Studio</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Organization</div></div><div class="dot"></div>
+      </div>
+      <div class="infinite-marquee v1 marquee-scroll-item">
+        <div class="marquee-item"><div>Company</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Enterprise</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Startup</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Business</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Studio</div></div><div class="dot"></div>
+        <div class="marquee-item"><div>Organization</div></div><div class="dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: KEY FEATURES ==================== -->
+  <section class="section top-rg">
+    <div class="container-default">
+      <div class="text-center">
+        <div class="inner-container _520px center">
+          <h2 class="display-8 mid">Key features</h2>
+          <p class="mg-top-4x-extra-small mg-bottom-large">
+            Stackly delivers state-of-the-art mechatronics and edge artificial intelligence that seamlessly integrates into real human environments.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Interactive Tabs -->
+      <div class="feature-tabs-nav" style="justify-content: center; margin-bottom: 32px;">
+        <button class="feature-tab-btn active" data-feature="1">Human-like dexterity</button>
+        <button class="feature-tab-btn" data-feature="2">Advanced AI</button>
+        <button class="feature-tab-btn" data-feature="3">Enhanced mobility</button>
+      </div>
+
+      <!-- Feature Slider Card 1 -->
+      <div class="slider-wrapper feature-tab-content" id="featureContent1">
+        <div class="grid-2-columns">
+          <div class="flex-vertical space-between---align-start gap-row-24px">
+            <div>
+              <h3 class="display-7 mid">Human-like dexterity</h3>
+              <p class="mg-top-4x-extra-small">
+                Engineered with 24 degrees of freedom tactile manipulators, capable of delicate home tasks and heavy industrial execution.
+              </p>
+            </div>
+            <div class="grid-1-column gap-row-2x-extra-small width-100">
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Handles delicate everyday tasks</div>
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Adapts to real home environments</div>
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Moves with natural, precise control</div>
+              <div class="divider bg-neutral-500"></div>
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dace2c_human-like-dexterity-robotflow-webflow-template.jpg" alt="Human Like Dexterity" class="main-border-radius fit-cover"/>
+        </div>
+      </div>
+
+      <!-- Feature Slider Card 2 -->
+      <div class="slider-wrapper feature-tab-content" id="featureContent2" style="display: none;">
+        <div class="grid-2-columns">
+          <div class="flex-vertical space-between---align-start gap-row-24px">
+            <div>
+              <h3 class="display-7 mid">Advanced AI</h3>
+              <p class="mg-top-4x-extra-small">
+                Continuous on-device neural processing ensures context comprehension, spatial reasoning, and continuous behavioral adaptation.
+              </p>
+            </div>
+            <div class="grid-1-column gap-row-2x-extra-small width-100">
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Understands context in real time</div>
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Learns from daily interactions</div>
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Adapts to changing environments</div>
+              <div class="divider bg-neutral-500"></div>
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dace2b_advanced-ai-robotflow-weblfow-template.jpg" alt="Advanced AI" class="main-border-radius fit-cover"/>
+        </div>
+      </div>
+
+      <!-- Feature Slider Card 3 -->
+      <div class="slider-wrapper feature-tab-content" id="featureContent3" style="display: none;">
+        <div class="grid-2-columns">
+          <div class="flex-vertical space-between---align-start gap-row-24px">
+            <div>
+              <h3 class="display-7 mid">Enhanced mobility</h3>
+              <p class="mg-top-4x-extra-small">
+                Dynamic balancing gyroscopes and high-torque electric joints enable seamless traversal across uneven planes, stairs, and tight indoor quarters.
+              </p>
+            </div>
+            <div class="grid-1-column gap-row-2x-extra-small width-100">
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Navigates tight indoor spaces</div>
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Moves smoothly between rooms</div>
+              <div class="divider bg-neutral-500"></div>
+              <div class="display-3 regular text-titles">Maintains balance on uneven floors</div>
+              <div class="divider bg-neutral-500"></div>
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dace2d_enhanced-mobility-robotflow-webflow-template.jpg" alt="Enhanced Mobility" class="main-border-radius fit-cover"/>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: INTRODUCING OMNIBOT GEN 2 ==================== -->
+  <section class="section content-section-v5">
+    <div class="container-default z-index-1">
+      <div class="grid-2-columns">
+        <div>
+          <h2 class="display-8 mid">Introducing OmniBot Gen 2</h2>
+          <p class="mg-top-2x-extra-small mg-bottom-small">
+            Our most sophisticated robotic platform yet. Precision titanium alloys, dual TPU processors, and long-life ceramic solid-state cells engineered for uninterrupted utility.
+          </p>
+          <div class="buttons-row left">
+            <a href="products.html" class="primary-button">
+              <div>Reserve now</div>
+              <div class="primary-button-bg"><div class="primary-button-bg-text">Reserve now</div></div>
+            </a>
+          </div>
+          <div class="stats-horizontal-tablet">
+            <div>
+              <div class="display-3 mid text-titles">Weight</div>
+              <div class="stat-large-text"><span class="count-up-number-animation" data-count="80">80</span> KG</div>
+            </div>
+            <div>
+              <div class="display-3 mid text-titles">Runtime</div>
+              <div class="stat-large-text"><span class="count-up-number-animation" data-count="7">7</span> HR</div>
+            </div>
+            <div>
+              <div class="display-3 mid text-titles">Speed</div>
+              <div class="stat-large-text"><span class="count-up-number-animation" data-count="1.2" data-decimals="1">1.2</span> M/s</div>
+            </div>
+          </div>
+        </div>
+        <div><!-- Spacer for background --></div>
+      </div>
+    </div>
+    <div class="background-image-wrapper content-section-image-v1">
+      <div class="background-image conten-section-image-v4"></div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: WHERE TECHNOLOGY MEETS DESIGN ==================== -->
+  <section class="section top-rg">
+    <div class="container-default">
+      <div class="grid-2-columns" style="align-items: start;">
+        <div class="inner-container _392px">
+          <h2 class="display-8">Where technology meets design</h2>
+          <div class="buttons-row left mg-top-small">
+            <a href="products.html" class="primary-button">
+              <div>Reserve now</div>
+              <div class="primary-button-bg"><div class="primary-button-bg-text">Reserve now</div></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="404.html" class="video-wrapper v1" id="openVideoBtn" aria-label="Watch Video Showcase">
+          <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dace2e_video-thumbnail-small-robotflow-webflow-template.jpg" alt="Video Showcase" class="lightbox-image"/>
+          <img src="https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dace33_play-button-small-robotflow-webflow-template.svg" alt="Play" class="play-button small"/>
+        </a>
+      </div>
+
+      <!-- 4 Spec Grids -->
+      <div class="mg-top-large">
+        <div class="title-and-paragraph-grid">
+          <div><h3 class="display-6 mid">Long life battery</h3></div>
+          <p>Next-gen solid-state lithium cells deliver up to 7 hours of high-load autonomy with magnetic inductive docking.</p>
+        </div>
+        <div class="title-and-paragraph-grid">
+          <div><h3 class="display-6 mid">Modular design</h3></div>
+          <p>Quick-release end-effectors and sensor pods swap effortlessly without requiring software recalibration.</p>
+        </div>
+        <div class="title-and-paragraph-grid">
+          <div><h3 class="display-6 mid">Gesture recognition</h3></div>
+          <p>Sub-millimeter millimeter-wave radar senses hand movements and body posture for natural command feedback.</p>
+        </div>
+        <div class="title-and-paragraph-grid last">
+          <div><h3 class="display-6 mid">Voice assistant</h3></div>
+          <p>Multilingual natural language model operates fully offline with directional beamforming microphone arrays.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6: DISCOVER THE NEW ERA CTA ==================== -->
+  <section class="section">
+    <div class="container-default">
+      <div class="card cta-card">
+        <div class="container-default">
+          <div class="grid-2-columns">
+            <div class="z-index-1">
+              <div class="inner-container _510px">
+                <h2 class="display-8 mid">Discover the new era of robotic technology</h2>
+                <p class="mg-top-4x-extra-small mg-bottom-small">
+                  Deploy Stackly autonomous systems into your facilities or home. Get prioritized allocation, custom neural training, and dedicated fleet telemetry.
+                </p>
+                <div class="buttons-row left">
+                  <a href="products.html" class="primary-button">
+                    <div>Reserve now</div>
+                    <div class="primary-button-bg"><div class="primary-button-bg-text">Reserve now</div></div>
+                  </a>
+                  <a href="about.html" class="link white">
+                    <div class="link-content-flex">
+                      <div>Learn more</div>
+                      <div class="item-icon-right"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="half-bg-right cta-card-bg-right">
+              <div class="background-image cta-card-bg-image"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7: TESTIMONIALS MARQUEE V2 ==================== -->
+  <section class="top-60px bottom-rg overflow-hidden">
+    <div class="infinite-marquee-wrapper v2">
+      <div class="infinite-marquee v2">
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“Efficiency, intelligence, and support packed in one!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">John Carter</div>
+            <div class="display-1 strong text-neutral-light">California</div>
+          </div>
+        </div>
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“Makes everyday life easier, faster, and smarter!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">Sophie Moore</div>
+            <div class="display-1 strong text-neutral-light">Chicago</div>
+          </div>
+        </div>
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“Incredible helper that never gets tired or distracted!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">Matt Cannon</div>
+            <div class="display-1 strong text-neutral-light">New York</div>
+          </div>
+        </div>
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“My smartest, most helpful assistant ever — hands down!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">Lilly Woods</div>
+            <div class="display-1 strong text-neutral-light">Washington</div>
+          </div>
+        </div>
+      </div>
+      <div class="infinite-marquee v2" aria-hidden="true">
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“Efficiency, intelligence, and support packed in one!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">John Carter</div>
+            <div class="display-1 strong text-neutral-light">California</div>
+          </div>
+        </div>
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“Makes everyday life easier, faster, and smarter!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">Sophie Moore</div>
+            <div class="display-1 strong text-neutral-light">Chicago</div>
+          </div>
+        </div>
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“Incredible helper that never gets tired or distracted!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">Matt Cannon</div>
+            <div class="display-1 strong text-neutral-light">New York</div>
+          </div>
+        </div>
+        <div class="infinite-marquee-card-v2">
+          <div class="mg-bottom-small"><div class="display-6 mid text-titles">“My smartest, most helpful assistant ever — hands down!”</div></div>
+          <div class="flex-horizontal gap-2x-extra-small">
+            <div class="display-1 strong text-titles">Lilly Woods</div>
+            <div class="display-1 strong text-neutral-light">Washington</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 8: FAQ ACCORDION V2 ==================== -->
+  <section class="section content-section-v7">
+    <div class="container-default">
+      <div class="inner-container _422px center text-center mg-bottom-large">
+        <h2 class="display-8 mid mg-bottom-4x-extra-small">Common questions</h2>
+        <p>Everything you need to know about the Stackly autonomous robotics ecosystem.</p>
+      </div>
+
+      <div class="inner-container _976px center">
+        <!-- FAQ 1 -->
+        <div class="accordion-wrapper v2 active">
+          <div class="accordion-display-number">01</div>
+          <h3 class="display-5 mid">What is the OmniBot?</h3>
+          <div class="accordion-toggle-text">Toggle</div>
+          <div class="accordion-body-v2">
+            <p>OmniBot is an autonomous bipedal humanoid robot designed for high-dexterity manipulation, spatial mapping, and dynamic indoor task execution.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-wrapper v2">
+          <div class="accordion-display-number">02</div>
+          <h3 class="display-5 mid">What tasks can the OmniBot perform?</h3>
+          <div class="accordion-toggle-text">Toggle</div>
+          <div class="accordion-body-v2">
+            <p>From complex cleanroom sorting and tool handling to inventory logistics and collaborative household assistance.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-wrapper v2">
+          <div class="accordion-display-number">03</div>
+          <h3 class="display-5 mid">How does the OmniBot ensure safety?</h3>
+          <div class="accordion-toggle-text">Toggle</div>
+          <div class="accordion-body-v2">
+            <p>Multiple hardware-isolated torque sensors, 360° collision radar, and instant compliant motor deceleration safeguard humans in proximity.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-wrapper v2 w-variant-last">
+          <div class="accordion-display-number">04</div>
+          <h3 class="display-5 mid">How is the OmniBot powered?</h3>
+          <div class="accordion-toggle-text">Toggle</div>
+          <div class="accordion-body-v2">
+            <p>High-density ceramic solid-state battery packs providing 7 hours of continuous operation with automated induction return.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 9: LATEST NEWS ==================== -->
+  <section class="section top-rg">
+    <div class="container-default">
+      <div class="flex-horizontal-wrap space-between mg-bottom-large">
+        <div class="inner-container _468px">
+          <h2 class="display-8 mid mg-bottom-4x-extra-small">Our latest news</h2>
+          <p>Read the latest breakthroughs from our robotics engineering and neural research laboratories.</p>
+        </div>
+        <div>
+          <a href="solutions.html" class="primary-button">
+            <div>Browse all articles</div>
+            <div class="primary-button-bg"><div class="primary-button-bg-text">Browse all articles</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-2-columns _0-9fr-1fr">
+        <!-- Featured Card -->
+        <a href="solutions.html" style="text-decoration: none;">
+          <div class="main-border-radius overflow-hidden" style="height: 300px;">
+            <img src="https://cdn.prod.website-files.com/699cb558653c272b82daccca/699cb558653c272b82dace1d_how-omnibot-could-transform-daily-life.jpg" alt="News" class="fit-cover"/>
+          </div>
+          <div class="card blog-card-v1">
+            <h3 class="display-6 mid">How Stackly’s robot could transform your daily life</h3>
+            <p style="color: var(--neutral-colors--400); margin: 8px 0 16px;">Advanced perception and soft tactile control enable human-level utility in domestic environments.</p>
+            <div class="flex-horizontal gap-2x-extra-small">
+              <span class="badge">Articles</span>
+              <span style="color: var(--neutral-colors--400); font-size: 14px;">March 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Side List -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <a href="solutions.html" class="card blog-card-v2">
+            <div>
+              <h3 class="display-5 mid" style="font-size: 20px; margin-bottom: 8px;">New update v1.3 for OmniBot now enables new features in your app</h3>
+              <div class="flex-horizontal gap-2x-extra-small">
+                <span class="badge">News</span>
+                <span style="color: var(--neutral-colors--400); font-size: 14px;">March 2026</span>
+              </div>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+
+          <a href="solutions.html" class="card blog-card-v2">
+            <div>
+              <h3 class="display-5 mid" style="font-size: 20px; margin-bottom: 8px;">How AI enhances learning and behavior in humanoid robots</h3>
+              <div class="flex-horizontal gap-2x-extra-small">
+                <span class="badge">Resources</span>
+                <span style="color: var(--neutral-colors--400); font-size: 14px;">Feb 2026</span>
+              </div>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+
+          <a href="solutions.html" class="card blog-card-v2">
+            <div>
+              <h3 class="display-5 mid" style="font-size: 20px; margin-bottom: 8px;">Can humanoid robots truly replace humans in daily tasks?</h3>
+              <div class="flex-horizontal gap-2x-extra-small">
+                <span class="badge">Articles</span>
+                <span style="color: var(--neutral-colors--400); font-size: 14px;">Jan 2026</span>
+              </div>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER (Exact Layout) ==================== -->
+  <div class="footer-content">
+    <div class="container-default">
+      <div class="footer-top-v1">
+        <div class="flex-horizontal-wrap space-between">
+          <div class="inner-container _370px" style="max-width: 370px;">
+            <h2 class="display-8 mid mg-bottom-2x-extra-small">Discover the new era of robotic technology</h2>
+            <div style="display: flex; gap: 12px; margin-top: 24px;">
+              <a href="404.html" class="btn-secondary-outline" style="border-radius: 50%; width: 40px; height: 40px; padding: 0; display: inline-flex; align-items: center; justify-content: center;" aria-label="X (Twitter)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="404.html" class="btn-secondary-outline" style="border-radius: 50%; width: 40px; height: 40px; padding: 0; display: inline-flex; align-items: center; justify-content: center;" aria-label="LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.62 1.62 0 0 0-1.62 1.62c0 .89.73 1.62 1.62 1.62.89 0 1.62-.73 1.62-1.62 0-.89-.73-1.62-1.62-1.62Z"/></svg>
+              </a>
+              <a href="404.html" class="btn-secondary-outline" style="border-radius: 50%; width: 40px; height: 40px; padding: 0; display: inline-flex; align-items: center; justify-content: center;" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="inner-container _670px">
+            <div class="footer-nav">
+              <div>
+                <div class="display-1 strong" style="margin-bottom: 20px;">Main pages</div>
+                <ul class="list-wrapper">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="solutions.html">Solutions</a></li>
+                  <li><a href="products.html">Products</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="display-1 strong" style="margin-bottom: 20px;">Portals</div>
+                <ul class="list-wrapper">
+                  <li><a href="404.html">Client Portal</a></li>
+                  <li><a href="404.html">Admin Console</a></li>
+                  <li><a href="404.html">Fleet Status</a></li>
+                  <li><a href="404.html">Swarm Grid</a></li>
+                  <li><a href="404.html">Support</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="display-1 strong" style="margin-bottom: 20px;">Stay Updated</div>
+                <p style="font-size: 14px; margin-bottom: 12px; color: var(--neutral-colors--400);">Subscribe with your Gmail account.</p>
+                <form class="newsletter-form">
+                  <input type="email" class="input-styled" placeholder="name@gmail.com" required style="margin-bottom: 8px;">
+                  <button type="submit" class="primary-button small" style="width: 100%;">
+                    <div>Subscribe</div>
+                    <div class="primary-button-bg"><div class="primary-button-bg-text">Subscribe</div></div>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-middle-v1">
+        <p style="max-width: 334px; font-size: 14px; color: var(--neutral-colors--400);">
+          Stackly builds autonomous embodied AI systems for industrial precision and human lifestyle assistance.
+        </p>
+        <a href="mailto:contact@stackly-robotics.ai" class="display-7" style="color: #fff;">contact@stackly.com</a>
+      </div>
+
+      <div class="footer-bottom-v1">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+        <p>Copyright © 2026 Stackly Robotics Inc. | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

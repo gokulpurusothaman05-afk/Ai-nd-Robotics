@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Client Fleet Dashboard</title>
+  <!-- Google Fonts: Inter Tight (Exact Template Font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <div class="header-wrapper">
+    <div class="container-default">
+      <div class="header-container-wrapper">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+
+        <!-- Exactly 5 Nav Items -->
+        <nav class="nav-menu-wrapper">
+          <ul class="list-nav-menu">
+            <li class="link-nav-item"><a href="index.html">Home</a></li>
+            <li class="link-nav-item"><a href="solutions.html">Solutions</a></li>
+            <li class="link-nav-item"><a href="products.html">Products</a></li>
+            <li class="link-nav-item"><a href="about.html">About</a></li>
+            <li class="link-nav-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-menu-right-side">
+          <a href="#" class="btn-secondary-outline dash-logout-btn" style="border-color: var(--accent-rose); color: var(--accent-rose);">Logout</a>
+          <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
+            <div class="hamburger-menu-line"></div>
+            <div class="hamburger-menu-line"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+      <a href="#" class="btn-secondary-outline dash-logout-btn" style="width: 100%; text-align: center; color: var(--accent-rose);">Disconnect Session (Logout)</a>
+    </div>
+  </div>
+
+  <!-- ==================== CLIENT DASHBOARD MAIN ==================== -->
+  <div class="dash-wrapper">
+    <!-- Responsive Sidebar (Visible on Desktop & Mobile) -->
+    <aside class="dash-side">
+      <div>
+        <div class="dash-user-badge">
+          <div>
+            <div style="font-size: 13px; font-weight: 600; color: #fff;" id="sessionUserEmail">client@gmail.com</div>
+            <div style="font-size: 11px; color: var(--accent-emerald); margin-top: 2px;">● Connected (Client Fleet)</div>
+          </div>
+        </div>
+
+        <ul class="dash-nav-list">
+          <li class="dash-nav-item">
+            <a href="#fleet-overview" class="dash-nav-link active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <span>Fleet Overview</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#telemetry-stream" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Telemetry Stream</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#mission-control" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              <span>Mission Control</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#diagnostics" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <span>Diagnostics</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#support" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Support</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dash-side-footer">
+        <button class="btn-secondary-outline dash-logout-btn" style="width: 100%; color: var(--accent-rose); border-color: rgba(244,63,94,0.4);">
+          End Session
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+
+      <!-- ================= SECTION 1: FLEET OVERVIEW ================= -->
+      <section id="fleet-overview" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h1 class="display-7 mid" style="margin-bottom: 4px;">Client Robotics Fleet</h1>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Real-time telemetry, battery capacity, and active unit allocation</p>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <a href="products.html" class="primary-button small">
+              <div>+ Deploy Unit</div>
+              <div class="primary-button-bg"><div class="primary-button-bg-text">+ Deploy Unit</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-3-columns" style="margin-bottom: 28px;">
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="font-size: 13px; color: var(--neutral-colors--400); text-transform: uppercase;">Active Swarm Units</div>
+            <div class="display-6 mid" style="font-size: 32px; margin: 6px 0; color: #fff;">12 / 12</div>
+            <div class="dash-status-pill" style="color: var(--accent-emerald);">● 100% Operational Health</div>
+          </div>
+
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="font-size: 13px; color: var(--neutral-colors--400); text-transform: uppercase;">Avg Battery Reserve</div>
+            <div class="display-6 mid" style="font-size: 32px; margin: 6px 0; color: #fff;">86.4%</div>
+            <div class="dash-status-pill" style="color: var(--neutral-colors--400);">~ 5.8 Hours Autonomy</div>
+          </div>
+
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="font-size: 13px; color: var(--neutral-colors--400); text-transform: uppercase;">Swarm Mesh Latency</div>
+            <div class="display-6 mid" style="font-size: 32px; margin: 6px 0; color: var(--accent-cyan);">11.4 ms</div>
+            <div class="dash-status-pill" style="color: var(--accent-cyan);">● Ultra-Low Edge Ping</div>
+          </div>
+        </div>
+
+        <!-- Active Fleet Table -->
+        <div class="card blog-card-v1" style="padding: 24px; margin-top: 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin: 0;">Assigned Robotic Units</h3>
+            <span style="font-size: 12px; color: var(--neutral-colors--400);">Live synchronization active</span>
+          </div>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--600); color: var(--neutral-colors--400);">
+                  <th style="padding: 12px 14px;">Unit ID</th>
+                  <th style="padding: 12px 14px;">Model Type</th>
+                  <th style="padding: 12px 14px;">Current Status</th>
+                  <th style="padding: 12px 14px;">Battery</th>
+                  <th style="padding: 12px 14px;">Assigned Zone</th>
+                  <th style="padding: 12px 14px; text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">STK-OB-0104</td>
+                  <td style="padding: 14px;">OmniBot Gen 2</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">● Sorting</span></td>
+                  <td style="padding: 14px;">92%</td>
+                  <td style="padding: 14px; color: var(--neutral-colors--300);">Bay 4 (Cleanroom)</td>
+                  <td style="padding: 14px; text-align: right;"><a href="#telemetry-stream" class="btn-secondary-outline" style="padding: 4px 10px; font-size: 12px;">Telemetry</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">STK-CA-0042</td>
+                  <td style="padding: 14px;">CyberArm X</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">● Precision Weld</span></td>
+                  <td style="padding: 14px;">100% (AC Line)</td>
+                  <td style="padding: 14px; color: var(--neutral-colors--300);">Cell B12</td>
+                  <td style="padding: 14px; text-align: right;"><a href="#telemetry-stream" class="btn-secondary-outline" style="padding: 4px 10px; font-size: 12px;">Telemetry</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">STK-OB-0115</td>
+                  <td style="padding: 14px;">OmniBot Gen 2</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-amber);">● Induction Dock</span></td>
+                  <td style="padding: 14px;">28%</td>
+                  <td style="padding: 14px; color: var(--neutral-colors--300);">Pad #2</td>
+                  <td style="padding: 14px; text-align: right;"><a href="#telemetry-stream" class="btn-secondary-outline" style="padding: 4px 10px; font-size: 12px;">Telemetry</a></td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">STK-OB-0209</td>
+                  <td style="padding: 14px;">OmniBot Pro</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">● Patrol Route</span></td>
+                  <td style="padding: 14px;">74%</td>
+                  <td style="padding: 14px; color: var(--neutral-colors--300);">Perimeter West</td>
+                  <td style="padding: 14px; text-align: right;"><a href="#telemetry-stream" class="btn-secondary-outline" style="padding: 4px 10px; font-size: 12px;">Telemetry</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: TELEMETRY STREAM ================= -->
+      <section id="telemetry-stream" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Real-Time Telemetry Stream</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Sub-millisecond motor dynamics, joint torque sensor bus, and IMU tracking</p>
+          </div>
+          <span class="dash-status-pill" style="color: var(--accent-emerald); background: rgba(16,185,129,0.15);">● Telemetry Active (60 Hz)</span>
+        </div>
+
+        <div class="grid-2-columns" style="margin-bottom: 24px;">
+          <!-- Telemetry Card 1 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Manipulator & Joint Bus Loads</h3>
+            
+            <div style="margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                <span>Joint 1 (Shoulder Pitch): 18.2 Nm</span>
+                <span style="color: var(--accent-emerald);">Nominal</span>
+              </div>
+              <div class="dash-progress-track">
+                <div class="dash-progress-fill" style="width: 32%; background: var(--accent-emerald);"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                <span>Joint 2 (Elbow Yaw): 29.4 Nm</span>
+                <span style="color: var(--accent-emerald);">Nominal</span>
+              </div>
+              <div class="dash-progress-track">
+                <div class="dash-progress-fill" style="width: 48%; background: var(--accent-emerald);"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                <span>Wrist Tactile Gripper: 4.1 N</span>
+                <span style="color: var(--accent-cyan);">Active Grip</span>
+              </div>
+              <div class="dash-progress-track">
+                <div class="dash-progress-fill" style="width: 22%; background: var(--accent-cyan);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                <span>Bipedal Knee Actuator: 64.0 Nm</span>
+                <span style="color: var(--accent-amber);">Moderate Load</span>
+              </div>
+              <div class="dash-progress-track">
+                <div class="dash-progress-fill" style="width: 68%; background: var(--accent-amber);"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Telemetry Card 2 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Thermal & Signal Metrics</h3>
+            <div class="grid-2-columns" style="gap: 16px;">
+              <div style="background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px; padding: 14px;">
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">Core CPU Temp</div>
+                <div style="font-size: 24px; font-weight: 600; color: #fff; margin: 4px 0;">38.6°C</div>
+                <div style="font-size: 12px; color: var(--accent-emerald);">Passive Liquid Cool OK</div>
+              </div>
+              <div style="background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px; padding: 14px;">
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">Motor Driver Temp</div>
+                <div style="font-size: 24px; font-weight: 600; color: #fff; margin: 4px 0;">42.1°C</div>
+                <div style="font-size: 12px; color: var(--accent-emerald);">Thermal Envelope Safe</div>
+              </div>
+              <div style="background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px; padding: 14px;">
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">Sub-GHz Signal RSSI</div>
+                <div style="font-size: 24px; font-weight: 600; color: var(--accent-cyan); margin: 4px 0;">-41 dBm</div>
+                <div style="font-size: 12px; color: var(--accent-emerald);">0.00% Packet Drop</div>
+              </div>
+              <div style="background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px; padding: 14px;">
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">Spatial IMU Drift</div>
+                <div style="font-size: 24px; font-weight: 600; color: #fff; margin: 4px 0;">0.012°</div>
+                <div style="font-size: 12px; color: var(--accent-emerald);">Auto-Compensated</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 3: MISSION CONTROL ================= -->
+      <section id="mission-control" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Mission Control & Autonomous Tasks</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Manage spatial path planning, job priorities, and payload assignments</p>
+          </div>
+          <button class="primary-button small" onclick="alert('Mission Dispatcher: All 3 autonomous routes are running smoothly.');">
+            <div>+ Dispatch Mission</div>
+            <div class="primary-button-bg"><div class="primary-button-bg-text">+ Dispatch Mission</div></div>
+          </button>
+        </div>
+
+        <div class="grid-3-columns" style="gap: 20px;">
+          <!-- Mission 1 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="dash-status-pill" style="color: var(--accent-emerald);">Active</span>
+              <span style="font-size: 12px; color: var(--neutral-colors--400);">Priority: High</span>
+            </div>
+            <h3 class="display-6 mid" style="font-size: 17px; margin-bottom: 6px;">Cleanroom Sorting Protocol</h3>
+            <p style="font-size: 13px; color: var(--neutral-colors--400); margin-bottom: 16px;">Assigned to STK-OB-0104. Sorting optical components with sub-millimeter precision.</p>
+            <div style="font-size: 12px; color: var(--neutral-colors--300); margin-bottom: 4px;">Progress (88%)</div>
+            <div class="dash-progress-track">
+              <div class="dash-progress-fill" style="width: 88%; background: var(--accent-emerald);"></div>
+            </div>
+          </div>
+
+          <!-- Mission 2 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="dash-status-pill" style="color: var(--accent-cyan);">In Progress</span>
+              <span style="font-size: 12px; color: var(--neutral-colors--400);">Priority: Medium</span>
+            </div>
+            <h3 class="display-6 mid" style="font-size: 17px; margin-bottom: 6px;">Pallet Logistics Run B</h3>
+            <p style="font-size: 13px; color: var(--neutral-colors--400); margin-bottom: 16px;">Assigned to STK-CA-0042. Automated welding & pallet container transfer.</p>
+            <div style="font-size: 12px; color: var(--neutral-colors--300); margin-bottom: 4px;">Progress (54%)</div>
+            <div class="dash-progress-track">
+              <div class="dash-progress-fill" style="width: 54%; background: var(--accent-cyan);"></div>
+            </div>
+          </div>
+
+          <!-- Mission 3 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="dash-status-pill" style="color: var(--accent-amber);">Queued</span>
+              <span style="font-size: 12px; color: var(--neutral-colors--400);">Priority: Low</span>
+            </div>
+            <h3 class="display-6 mid" style="font-size: 17px; margin-bottom: 6px;">Perimeter Security Scan</h3>
+            <p style="font-size: 13px; color: var(--neutral-colors--400); margin-bottom: 16px;">Assigned to STK-OB-0209. Night cycle facility sweep & spatial map refresh.</p>
+            <div style="font-size: 12px; color: var(--neutral-colors--300); margin-bottom: 4px;">Queued (Start at 22:00)</div>
+            <div class="dash-progress-track">
+              <div class="dash-progress-fill" style="width: 10%; background: var(--accent-amber);"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 4: DIAGNOSTICS ================= -->
+      <section id="diagnostics" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Hardware & Subsystem Diagnostics</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Real-time sensor validation, motor impedance tests, and safety interlocks</p>
+          </div>
+          <button class="btn-secondary-outline" onclick="alert('Diagnostics complete: All 8 core subsystems operating within nominal parameters.');">
+            Run Full Self-Check
+          </button>
+        </div>
+
+        <div class="grid-2-columns" style="gap: 20px;">
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Core Subsystems</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--neutral-colors--700);">
+              <div>
+                <div style="font-weight: 500; color: #fff;">Solid-State LiDAR (360°)</div>
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">Zero beam occlusion detected</div>
+              </div>
+              <span class="dash-status-pill" style="color: var(--accent-emerald);">Passed</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--neutral-colors--700);">
+              <div>
+                <div style="font-weight: 500; color: #fff;">Edge Neural Co-Processor</div>
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">1.2 TFLOP load / 0 error interrupts</div>
+              </div>
+              <span class="dash-status-pill" style="color: var(--accent-emerald);">Passed</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--neutral-colors--700);">
+              <div>
+                <div style="font-weight: 500; color: #fff;">Tactile Compliant Torque Bus</div>
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">Zero calibration drift</div>
+              </div>
+              <span class="dash-status-pill" style="color: var(--accent-emerald);">Passed</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; padding: 12px 0;">
+              <div>
+                <div style="font-weight: 500; color: #fff;">Emergency Magnetic Brake Bus</div>
+                <div style="font-size: 12px; color: var(--neutral-colors--400);">Deceleration response: 4.8ms</div>
+              </div>
+              <span class="dash-status-pill" style="color: var(--accent-emerald);">Passed</span>
+            </div>
+          </div>
+
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Safety & Compliance Envelope</h3>
+            <p style="font-size: 14px; color: var(--neutral-colors--400); margin-bottom: 20px;">
+              ISO 10218-1 & ISO/TS 15066 collaborative robotics safety certified. Proximity zones dynamically adapt based on human proximity detection.
+            </p>
+            <div style="background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px;">
+                <span>Safety Zone Perimeter</span>
+                <span style="color: var(--accent-emerald); font-weight: 600;">ACTIVE (0.8m Bubble)</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px;">
+                <span>Compliance Interlock</span>
+                <span style="color: var(--accent-emerald); font-weight: 600;">ENFORCED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 5: SUPPORT ================= -->
+      <section id="support" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Enterprise Robotics Support</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">24/7 dedicated engineering support, SLA monitoring, and spare parts requisition</p>
+          </div>
+          <span class="dash-status-pill" style="color: var(--accent-emerald);">● Tier-1 SLA Active</span>
+        </div>
+
+        <div class="grid-2-columns" style="gap: 20px;">
+          <!-- Assigned Engineer Card -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Dedicated Systems Engineer</h3>
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+              <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--neutral-colors--600); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 600; color: #fff;">
+                SJ
+              </div>
+              <div>
+                <div style="font-weight: 600; color: #fff; font-size: 16px;">Sarah Jenkins</div>
+                <div style="font-size: 13px; color: var(--neutral-colors--400);">Lead Mechatronics Systems Architect</div>
+                <div style="font-size: 12px; color: var(--accent-emerald); margin-top: 2px;">● Online (Direct SLA Support)</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+              <a href="contact.html" class="primary-button small">
+                <div>Open Priority Ticket</div>
+                <div class="primary-button-bg"><div class="primary-button-bg-text">Open Priority Ticket</div></div>
+              </a>
+              <a href="contact.html" class="btn-secondary-outline">Schedule Maintenance</a>
+            </div>
+          </div>
+
+          <!-- Active Ticket Card -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Recent Support Inquiries</h3>
+            
+            <div style="padding: 12px; background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px; margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="font-weight: 600; color: #fff; font-size: 13px;">#STK-8821: Induction Pad Calibration</span>
+                <span class="dash-status-pill" style="color: var(--accent-emerald); font-size: 11px;">Resolved</span>
+              </div>
+              <div style="font-size: 12px; color: var(--neutral-colors--400);">Firmware patch 4.19.1 applied automatically.</div>
+            </div>
+
+            <div style="padding: 12px; background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="font-weight: 600; color: #fff; font-size: 13px;">#STK-8790: Quarterly Sensor Certification</span>
+                <span class="dash-status-pill" style="color: var(--neutral-colors--300); font-size: 11px;">Completed</span>
+              </div>
+              <div style="font-size: 12px; color: var(--neutral-colors--400);">ISO inspection passed with 100% compliance.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <div class="footer-content">
+    <div class="container-default">
+      <div class="footer-bottom-v1" style="padding-top: 0;">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+        <p>Copyright © 2026 Stackly Robotics Inc. | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

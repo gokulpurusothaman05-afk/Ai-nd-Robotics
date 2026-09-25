@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Admin Swarm Console</title>
+  <!-- Google Fonts: Inter Tight (Exact Template Font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <div class="header-wrapper">
+    <div class="container-default">
+      <div class="header-container-wrapper">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+
+        <!-- Exactly 5 Nav Items -->
+        <nav class="nav-menu-wrapper">
+          <ul class="list-nav-menu">
+            <li class="link-nav-item"><a href="index.html">Home</a></li>
+            <li class="link-nav-item"><a href="solutions.html">Solutions</a></li>
+            <li class="link-nav-item"><a href="products.html">Products</a></li>
+            <li class="link-nav-item"><a href="about.html">About</a></li>
+            <li class="link-nav-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-menu-right-side">
+          <a href="#" class="btn-secondary-outline dash-logout-btn" style="border-color: var(--accent-rose); color: var(--accent-rose);">Admin Logout</a>
+          <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
+            <div class="hamburger-menu-line"></div>
+            <div class="hamburger-menu-line"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+      <a href="#" class="btn-secondary-outline dash-logout-btn" style="width: 100%; text-align: center; color: var(--accent-rose);">Admin Disconnect</a>
+    </div>
+  </div>
+
+  <!-- ==================== ADMIN DASHBOARD MAIN ==================== -->
+  <div class="dash-wrapper">
+    <!-- Responsive Sidebar (Visible on Desktop & Mobile) -->
+    <aside class="dash-side">
+      <div>
+        <div class="dash-user-badge">
+          <div>
+            <div style="font-size: 13px; font-weight: 600; color: #fff;" id="sessionUserEmail">admin@gmail.com</div>
+            <div style="font-size: 11px; color: var(--accent-purple); margin-top: 2px;">● Root Clearance (SuperAdmin)</div>
+          </div>
+        </div>
+
+        <ul class="dash-nav-list">
+          <li class="dash-nav-item">
+            <a href="#swarm-grid" class="dash-nav-link active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Swarm Grid</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#neural-weights" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+              <span>Neural Weights</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#ota-deployer" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              <span>OTA Deployer</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#access-control" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Access Control</span>
+            </a>
+          </li>
+          <li class="dash-nav-item">
+            <a href="#audit-logs" class="dash-nav-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              <span>Audit Logs</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dash-side-footer">
+        <button class="btn-secondary-outline dash-logout-btn" style="width: 100%; color: var(--accent-rose); border-color: rgba(244,63,94,0.4);">
+          Terminate Root Session
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+
+      <!-- ================= SECTION 1: GLOBAL SWARM GRID ================= -->
+      <section id="swarm-grid" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h1 class="display-7 mid" style="margin-bottom: 4px;">Admin Swarm Console</h1>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Global autonomous fleet orchestration and neural compute infrastructure</p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn-secondary-outline" onclick="alert('Emergency Halt Protocol: Swarm safety bus armed.');" style="border-color: rgba(244,63,94,0.5); color: var(--accent-rose);">
+              Emergency Halt
+            </button>
+            <a href="#ota-deployer" class="primary-button small">
+              <div>Push Global OTA</div>
+              <div class="primary-button-bg"><div class="primary-button-bg-text">Push Global OTA</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-3-columns" style="margin-bottom: 28px;">
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="font-size: 13px; color: var(--neutral-colors--400); text-transform: uppercase;">Global Nodes Active</div>
+            <div class="display-6 mid" style="font-size: 32px; margin: 6px 0; color: #fff;">4,812</div>
+            <div class="dash-status-pill" style="color: var(--accent-emerald);">● 38 Enterprise Regions Online</div>
+          </div>
+
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="font-size: 13px; color: var(--neutral-colors--400); text-transform: uppercase;">TPU Cluster Utilization</div>
+            <div class="display-6 mid" style="font-size: 32px; margin: 6px 0; color: var(--accent-purple);">42.8%</div>
+            <div class="dash-status-pill" style="color: var(--accent-purple);">18,400 TFLOPs active</div>
+          </div>
+
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="font-size: 13px; color: var(--neutral-colors--400); text-transform: uppercase;">Mesh Consensus Rate</div>
+            <div class="display-6 mid" style="font-size: 32px; margin: 6px 0; color: var(--accent-cyan);">99.998%</div>
+            <div class="dash-status-pill" style="color: var(--accent-cyan);">● Zero Partition Faults</div>
+          </div>
+        </div>
+
+        <!-- Regional Swarm Grid Table -->
+        <div class="card blog-card-v1" style="padding: 24px; margin-top: 0;">
+          <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Regional Autonomous Swarm Nodes</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--600); color: var(--neutral-colors--400);">
+                  <th style="padding: 12px 14px;">Region</th>
+                  <th style="padding: 12px 14px;">Active Humanoids</th>
+                  <th style="padding: 12px 14px;">Robotic Arms</th>
+                  <th style="padding: 12px 14px;">Inference Latency</th>
+                  <th style="padding: 12px 14px;">Health</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">us-east-1 (N. Virginia)</td>
+                  <td style="padding: 14px;">1,240 OmniBot</td>
+                  <td style="padding: 14px;">680 CyberArm</td>
+                  <td style="padding: 14px; color: var(--accent-cyan);">3.8 ms</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">● Optimal</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">eu-central-1 (Frankfurt)</td>
+                  <td style="padding: 14px;">980 OmniBot</td>
+                  <td style="padding: 14px;">540 CyberArm</td>
+                  <td style="padding: 14px; color: var(--accent-cyan);">4.1 ms</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">● Optimal</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">ap-northeast-1 (Tokyo)</td>
+                  <td style="padding: 14px;">820 OmniBot</td>
+                  <td style="padding: 14px;">412 CyberArm</td>
+                  <td style="padding: 14px; color: var(--accent-cyan);">3.2 ms</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">● Optimal</span></td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">sa-east-1 (São Paulo)</td>
+                  <td style="padding: 14px;">110 OmniBot</td>
+                  <td style="padding: 14px;">30 CyberArm</td>
+                  <td style="padding: 14px; color: var(--accent-amber);">9.4 ms</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">● Synchronized</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: NEURAL WEIGHTS ================= -->
+      <section id="neural-weights" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Neural Model Registry & Weights</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Deploy quantized edge weights to 4,812 distributed robotic co-processors</p>
+          </div>
+          <button class="btn-secondary-outline" onclick="alert('Model Checkpoint Sync: Validating SHA-256 weight signatures...');">
+            Sync Model Checkpoint
+          </button>
+        </div>
+
+        <div class="grid-3-columns" style="gap: 20px;">
+          <!-- Model 1 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="dash-status-pill" style="color: var(--accent-emerald);">Active Default</span>
+              <span style="font-size: 12px; color: var(--neutral-colors--400);">INT8 Quantized</span>
+            </div>
+            <h3 class="display-6 mid" style="font-size: 17px; margin-bottom: 6px;">Vision-Transformer-v4.2</h3>
+            <p style="font-size: 13px; color: var(--neutral-colors--400); margin-bottom: 14px;">Zero-shot 3D spatial object segmentation & pose estimation at 120 FPS.</p>
+            <div style="font-size: 12px; color: var(--neutral-colors--300); margin-bottom: 4px;">Inference Latency: 4.2ms</div>
+            <div class="dash-progress-track">
+              <div class="dash-progress-fill" style="width: 25%; background: var(--accent-emerald);"></div>
+            </div>
+          </div>
+
+          <!-- Model 2 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="dash-status-pill" style="color: var(--accent-cyan);">Deployed</span>
+              <span style="font-size: 12px; color: var(--neutral-colors--400);">FP16 Edge</span>
+            </div>
+            <h3 class="display-6 mid" style="font-size: 17px; margin-bottom: 6px;">SwarmNet-7B PathPlanner</h3>
+            <p style="font-size: 13px; color: var(--neutral-colors--400); margin-bottom: 14px;">Multi-agent dynamic collision avoidance and consensus routing.</p>
+            <div style="font-size: 12px; color: var(--neutral-colors--300); margin-bottom: 4px;">Inference Latency: 8.6ms</div>
+            <div class="dash-progress-track">
+              <div class="dash-progress-fill" style="width: 45%; background: var(--accent-cyan);"></div>
+            </div>
+          </div>
+
+          <!-- Model 3 -->
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="dash-status-pill" style="color: var(--accent-purple);">Staging Canary</span>
+              <span style="font-size: 12px; color: var(--neutral-colors--400);">TensorRT 10.1</span>
+            </div>
+            <h3 class="display-6 mid" style="font-size: 17px; margin-bottom: 6px;">TactileDexterity-v3</h3>
+            <p style="font-size: 13px; color: var(--neutral-colors--400); margin-bottom: 14px;">Micro-force feedback sensor fusion for fragile cleanroom items.</p>
+            <div style="font-size: 12px; color: var(--neutral-colors--300); margin-bottom: 4px;">Inference Latency: 1.8ms</div>
+            <div class="dash-progress-track">
+              <div class="dash-progress-fill" style="width: 15%; background: var(--accent-purple);"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 3: OTA DEPLOYER ================= -->
+      <section id="ota-deployer" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Over-The-Air (OTA) Swarm Firmware Pipeline</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Immutable kernel rollback, cryptographic integrity checks, and staggered deployment</p>
+          </div>
+          <button class="primary-button small" onclick="alert('OTA Pipeline: Firmware build 4.19.2 broadcast to staging clusters.');">
+            <div>Deploy Firmware v4.19.2</div>
+            <div class="primary-button-bg"><div class="primary-button-bg-text">Deploy Firmware v4.19.2</div></div>
+          </button>
+        </div>
+
+        <div class="grid-2-columns" style="gap: 20px;">
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Global Rollout Progress</h3>
+            <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px;">
+              <span style="color: #fff; font-weight: 500;">StackOS Release v4.19.2 (Security Patch)</span>
+              <span style="color: var(--accent-emerald); font-weight: 600;">94.8% Complete</span>
+            </div>
+            <div class="dash-progress-track" style="height: 12px;">
+              <div class="dash-progress-fill" style="width: 94.8%; background: linear-gradient(90deg, #3b82f6, #10b981);"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--neutral-colors--400); margin-top: 10px;">
+              <span>4,562 of 4,812 Nodes Upgraded</span>
+              <span>250 Nodes In Safe Staging</span>
+            </div>
+          </div>
+
+          <div class="card blog-card-v1" style="margin-top: 0; padding: 24px;">
+            <h3 class="display-6 mid" style="font-size: 18px; margin-bottom: 16px;">Kernel Safeguards</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--neutral-colors--300);">
+              <li style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--accent-emerald);">✔</span> A/B Partition Dual Boot Protection
+              </li>
+              <li style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--accent-emerald);">✔</span> Ed25519 Cryptographic Kernel Signing
+              </li>
+              <li style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--accent-emerald);">✔</span> Automated Fallback on Thermal Anomaly
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 4: ACCESS CONTROL ================= -->
+      <section id="access-control" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Role-Based Access Control (RBAC)</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Manage authenticated Gmail developer accounts, security clearances, and API keys</p>
+          </div>
+          <button class="btn-secondary-outline" onclick="alert('RBAC Clearance: New operator credentials generated.');">
+            + Grant New Clearance
+          </button>
+        </div>
+
+        <div class="card blog-card-v1" style="padding: 24px; margin-top: 0;">
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--600); color: var(--neutral-colors--400);">
+                  <th style="padding: 12px 14px;">Authorized User</th>
+                  <th style="padding: 12px 14px;">Clearance Tier</th>
+                  <th style="padding: 12px 14px;">MFA Status</th>
+                  <th style="padding: 12px 14px;">Session Age</th>
+                  <th style="padding: 12px 14px; text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">admin@gmail.com</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-purple);">Root SuperAdmin</span></td>
+                  <td style="padding: 14px; color: var(--accent-emerald);">Hardware FIDO2</td>
+                  <td style="padding: 14px; color: var(--neutral-colors--300);">Active (This Terminal)</td>
+                  <td style="padding: 14px; text-align: right;"><span style="color: var(--neutral-colors--500); font-size: 12px;">Primary</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--neutral-colors--700);">
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">lead.eng@gmail.com</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-cyan);">Fleet Architect</span></td>
+                  <td style="padding: 14px; color: var(--accent-emerald);">TOTP Verified</td>
+                  <td style="padding: 14px; color: var(--neutral-colors--300);">2.4 Hours</td>
+                  <td style="padding: 14px; text-align: right;"><button class="btn-secondary-outline" style="padding: 4px 8px; font-size: 11px;" onclick="alert('Session revoked.');">Revoke</button></td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px; font-weight: 600; color: #fff;">client@gmail.com</td>
+                  <td style="padding: 14px;"><span class="dash-status-pill" style="color: var(--accent-emerald);">Client Fleet Access</span></td>
+                  <td style="padding: 14px; color: var(--accent-emerald);">Gmail Verified</td>
+                  <td style="padding: 14px; color: var(--neutral-colors--300);">45 Minutes</td>
+                  <td style="padding: 14px; text-align: right;"><button class="btn-secondary-outline" style="padding: 4px 8px; font-size: 11px;" onclick="alert('Session revoked.');">Revoke</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 5: AUDIT LOGS ================= -->
+      <section id="audit-logs" class="dash-section">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="display-7 mid" style="margin-bottom: 4px;">Live Kernel Stream & Security Audit</h2>
+            <p style="font-size: 14px; color: var(--neutral-colors--400);">Continuous TLS-verified audit trail across all robotic swarm mesh layers</p>
+          </div>
+          <button class="btn-secondary-outline" onclick="alert('Exporting kernel audit logs to encrypted JSON archive...');">
+            Export Audit Bundle
+          </button>
+        </div>
+
+        <div class="card blog-card-v1" style="padding: 24px; margin-top: 0;">
+          <div style="background: var(--neutral-colors--800); border: 1px solid var(--neutral-colors--600); border-radius: 12px; padding: 18px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; color: #c4b5fd; height: 260px; overflow-y: auto; line-height: 1.6;" id="liveTerminalFeed">
+            <div>[09:48:12] <span style="color: #6ee7b7;">[KERNEL_INIT]</span> Swarm grid master initialized on cluster root #0</div>
+            <div>[09:48:15] <span style="color: #67e8f9;">[GLOBAL_MESH]</span> 4,812 nodes broadcasting telemetry beacon at 60Hz</div>
+            <div>[09:48:18] <span style="color: #a78bfa;">[SECURITY]</span> Root session granted to admin@gmail.com with FIDO2 key</div>
+            <div>[09:48:22] <span style="color: #6ee7b7;">[OTA_DEPLOY]</span> SwarmOS 4.19.2 rolling out: 94.8% nodes completed</div>
+            <div>[09:48:26] <span style="color: #fbbf24;">[TELEMETRY]</span> Sub-GHz RF Mesh SNR nominal across 38 regional sectors</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <div class="footer-content">
+    <div class="container-default">
+      <div class="footer-bottom-v1" style="padding-top: 0;">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+        <p>Copyright © 2026 Stackly Robotics Inc. | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

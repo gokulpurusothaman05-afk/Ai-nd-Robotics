@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <!-- Google Fonts: Inter Tight (Exact Template Font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <div class="header-wrapper">
+    <div class="container-default">
+      <div class="header-container-wrapper">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+
+        <!-- Exactly 5 Nav Items -->
+        <nav class="nav-menu-wrapper">
+          <ul class="list-nav-menu">
+            <li class="link-nav-item"><a href="index.html">Home</a></li>
+            <li class="link-nav-item"><a href="solutions.html">Solutions</a></li>
+            <li class="link-nav-item"><a href="products.html">Products</a></li>
+            <li class="link-nav-item"><a href="about.html">About</a></li>
+            <li class="link-nav-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-menu-right-side">
+          <a href="login.html" class="btn-secondary-outline" style="border-color: #fff;">Portal Login</a>
+          <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
+            <div class="hamburger-menu-line"></div>
+            <div class="hamburger-menu-line"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+      <a href="login.html" class="btn-secondary-outline" style="width: 100%; text-align: center;">Client / Admin Login</a>
+    </div>
+  </div>
+
+  <!-- ==================== LOGIN SECTION ==================== -->
+  <section class="auth-page-section">
+    <div class="auth-form-card">
+      <div class="text-center" style="margin-bottom: 24px;">
+        <h1 class="display-7 mid" id="loginRoleTitle" style="margin-bottom: 8px;">Client Robotics Portal</h1>
+        <p style="font-size: 14px; color: var(--neutral-colors--400);">
+          Strictly authorized @gmail.com accounts only.
+        </p>
+      </div>
+
+      <!-- Role Selector Toggle (Client vs Admin) -->
+      <div class="auth-role-tabs">
+        <button type="button" class="auth-role-btn active role-tab-btn" data-role="client">Client Dashboard</button>
+        <button type="button" class="auth-role-btn role-tab-btn" data-role="admin">Admin Console</button>
+      </div>
+
+      <!-- Status Feedback Alert -->
+      <div id="authAlert" class="auth-feedback-box"></div>
+
+      <!-- Login Form - ZERO Inbuilt / Hardcoded Credentials -->
+      <form id="stacklyLoginForm">
+        <input type="hidden" id="selectedRole" value="client">
+
+        <div class="form-group-item">
+          <label class="form-label-text">
+            <span>Gmail Address</span>
+            <span style="color: var(--accent-cyan); font-size: 12px;">@gmail.com required</span>
+          </label>
+          <input 
+            type="email" 
+            id="authEmail" 
+            class="input-styled" 
+            placeholder="username@gmail.com" 
+            required 
+            autocomplete="off">
+        </div>
+
+        <div class="form-group-item">
+          <label class="form-label-text">
+            <span>Access Password</span>
+            <a href="404.html" style="color: var(--neutral-colors--400); font-size: 12px;">Forgot key?</a>
+          </label>
+          <input 
+            type="password" 
+            id="authPassword" 
+            class="input-styled" 
+            placeholder="••••••••••••" 
+            required 
+            autocomplete="off">
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; font-size: 13px; color: var(--neutral-colors--400);">
+          <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox"> Remember session
+          </label>
+          <a href="404.html" style="color: #fff;">Help Guide</a>
+        </div>
+
+        <button type="submit" class="primary-button" style="width: 100%;">
+          <div>Authorize Access</div>
+          <div class="primary-button-bg"><div class="primary-button-bg-text">Authorize Access</div></div>
+        </button>
+      </form>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--neutral-colors--600); text-align: center;">
+        <p style="font-size: 14px; color: var(--neutral-colors--400); margin-bottom: 12px;">Don't have an account?</p>
+        <a href="signup.html" class="btn-secondary-outline" style="width: 100%; display: block; text-align: center; text-decoration: none;">
+          Create New Account / Sign Up
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <div class="footer-content">
+    <div class="container-default">
+      <div class="footer-middle-v1" style="border-top: none; padding-top: 0;">
+        <p style="max-width: 334px; font-size: 14px; color: var(--neutral-colors--400);">
+          Stackly builds autonomous embodied AI systems for industrial precision and human lifestyle assistance.
+        </p>
+        <a href="mailto:contact@stackly-robotics.ai" class="display-7" style="color: #fff;">contact@stackly.com</a>
+      </div>
+
+      <div class="footer-bottom-v1">
+        <a href="index.html" class="logo-wrapper">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-image">
+          <span>Stackly</span>
+        </a>
+        <p>Copyright © 2026 Stackly Robotics Inc. | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
