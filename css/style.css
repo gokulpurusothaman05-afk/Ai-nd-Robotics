@@ -528,7 +528,7 @@ img, svg {
 }
 
 .background-image.home-v2-hero {
-  background-image: url("https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dacde5_the-revolution-starts-here-robotflow-webflow-ecommerce-template.jpg");
+  background-image: url("../images/the-revolution-starts-here-robotflow-webflow-ecommerce-template.webp");
   background-position: 100% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -761,7 +761,7 @@ img, svg {
 }
 
 .background-image.conten-section-image-v4 {
-  background-image: url("https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dacde6_introducing-omnibot-gen-2-robotflow-webflow-template.png");
+  background-image: url("../images/introducing-omnibot-gen-2-robotflow-webflow-template.webp");
   background-position: 100% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -847,7 +847,7 @@ img, svg {
 }
 
 .background-image.cta-card-bg-image {
-  background-image: url("https://cdn.prod.website-files.com/699cb558653c272b82dacccc/699cb558653c272b82dace37_cta-home-v3-bg-image-robotflow-weblfow-template.jpg");
+  background-image: url("../images/cta-home-v3-bg-image-robotflow-weblfow-template.webp");
   background-position: center;
   background-size: cover;
   width: 100%;
